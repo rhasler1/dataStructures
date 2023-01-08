@@ -202,17 +202,18 @@ public class HammockHotel {
       * in the Node Array - this.usage is updated within this method.
       * */
     public boolean addUnique(String guestName) {
-		boolean added = false;
-		if (!this.contains(guestName)) {
-			this.add(guestName);
-			added = true;
-		}
-		return added;
-	}
+        boolean added = false;
+	if (!this.contains(guestName)) {
+            this.add(guestName);
+            added = true;
+        }
+        return added;
+    }
 
 
     /**
      * Are there any guests in the hotel?
+     *
      *
      * @return true if there are absolutely no guests in the hotel and false otherwise.
      */
@@ -222,12 +223,13 @@ public class HammockHotel {
       * array is empty and returns true, false otherwise.
       * */
     public boolean isEmpty() {
-		return this.usage == 0;
+        return this.usage == 0;
     }  // method isEmpty
 
 
-    /**
-     * Create a String array with the guest names as its elements.
+    /*
+     * 
+     * reate a String array with the guest names as its elements.
      *
      * @return String array with the names of all the guest.
      */
@@ -237,20 +239,20 @@ public class HammockHotel {
       * this ensures that the array be sized to the number of elements in
       * the array rooms.  A for loop is then used to find all the elements
       * in array rooms, each element found is stored in the new array, the
-      * new array is then returned.
+      * new array is then returned
       * */
     public String[] toArray() {
         String[] array = new String[this.usage];
         int count = 0;
         for (int i = 0; i < this.rooms.length; i++) {
-			Node hammock = this.rooms[i];
-			while (hammock != null) {
-				array[count] = hammock.data;
-				count++;
-				hammock = hammock.next;
-			}
-		}
-		return array;
+            Node hammock = this.rooms[i];
+            while (hammock != null) {
+                array[count] = hammock.data;
+		count++;
+		hammock = hammock.next;
+            }
+        }
+        return array;
     }  // method toArray
 
 
@@ -260,11 +262,11 @@ public class HammockHotel {
      * this.usage is then set to 0 to reflect the empty rooms array.
      * */
     public void clear() {
-		for (int i = 0; i < this.rooms.length; i++) {
-			this.rooms[i] = null;
-		}
-			this.usage = 0;
-	}  //  method clear
+        for (int i = 0; i < this.rooms.length; i++) {
+            this.rooms[i] = null;
+        }
+        this.usage = 0;
+    }  //  method clear
 
 
     /**
@@ -274,7 +276,7 @@ public class HammockHotel {
      
      /**
       * Method stats initializes an int array to be the same length as the
-      * array rooms length.  Every Node in the array rooms is then checked
+      * array rooms length. Every Node in the array rooms is then checked
       * to see if it contains data, ie: != null, if so the count for the
       * corresponding int array is incremented to reflect the number of
       * elements or hammocks contained in the specified index array rooms.
@@ -282,17 +284,17 @@ public class HammockHotel {
       * checked.
       * */
     public int[] stats() {
-		int array[] = new int[this.rooms.length];
+        int array[] = new int[this.rooms.length];
         for (int i = 0; i < this.rooms.length; i++) {
-			Node hammock = this.rooms[i];
-			int count = 0;
-			while (hammock != null) {
-				count++;
-				hammock = hammock.next;
-			}
-			array[i] = count;
-		}
-		return array;
+            Node hammock = this.rooms[i];
+	    int count = 0;
+	    while (hammock != null) {
+                count++;
+                hammock = hammock.next;
+            }
+            array[i] = count;
+        }
+        return array;
     }
 
 
