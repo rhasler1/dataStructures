@@ -6,3 +6,5 @@ HammockHotel.java - Array of Linked Lists
 UsefulDresser.java - ArrayList in Java
 
 QueueExercise.java - Queue Exercises in Java
+
+StackExercise.java - Stack Exercises in Java
