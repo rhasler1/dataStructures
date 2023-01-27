@@ -4,3 +4,5 @@ This repository contains programs that replicate the properties of various well 
 HammockHotel.java - Array of Linked Lists
 
 UsefulDresser.java - ArrayList in Java
+
+QueueExercise.java - Queue Exercises in Java
